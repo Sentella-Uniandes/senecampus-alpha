@@ -1,10 +1,11 @@
 from fastapi import FastAPI
+from app.core.config import settings
 
-app = FastAPI()
+app = FastAPI(title=settings.PROJECT_NAME, debug=settings.DEBUG)
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "env": settings.ENV}
 
 def main():
     print("Hello from senecampus-backend!")
