@@ -1,0 +1,17 @@
+[project]
+name = "senecampus-backend"
+version = "0.1.0"
+description = "FastAPI backend server for managing users, anchors (activities), reduced vectors, and a party/notification system with per-user mailboxes."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.16.5",
+    "fastapi>=0.117.0",
+    "numpy>=2.3.3",
+    "pydantic>=2.0",
+    "python-dotenv>=1.1.1",
+    "scikit-learn>=1.7.2",
+    "spacy>=3.8.7",
+    "sqlalchemy>=2.0.43",
+    "uvicorn[standard]>=0.36.0",
+]
