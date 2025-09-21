@@ -14,6 +14,9 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title=settings.PROJECT_NAME, debug=settings.DEBUG, lifespan=lifespan)
 app.include_router(api)
 
+from fastapi.staticfiles import StaticFiles
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 @app.get("/health")
 def health():
     return {"status": "ok", "env": settings.ENV}
