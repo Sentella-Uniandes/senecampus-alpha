@@ -1,7 +1,17 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from app.core.config import settings
 
-app = FastAPI(title=settings.PROJECT_NAME, debug=settings.DEBUG)
+from app.core.database import Base, engine
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    Base.metadata.create_all(bind=engine)  # mappings already imported
+    yield
+    engine.dispose()
+
+app = FastAPI(title=settings.PROJECT_NAME, debug=settings.DEBUG, lifespan=lifespan)
+app.include_router(api)
 
 @app.get("/health")
 def health():
