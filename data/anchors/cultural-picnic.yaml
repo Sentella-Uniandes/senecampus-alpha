@@ -1,0 +1,20 @@
+version: 1
+join_window_min: 15
+notify_template: '{initiator_username} wants ''{anchor_title}'' ({min_size}-{max_size}).
+  Join?'
+reduced_dim: 128
+slug: cultural-picnic
+title: Cultural Picnic
+description: Meet on a lawn to share music, short readings, and conversation in a
+  relaxed, open-air setting.
+tags:
+- social
+- casual
+- outdoor
+- culture
+- campus
+is_ghost: false
+min_size: 3
+max_size: 16
+reduced_vec_file: data/anchors/cultural-picnic.reduced.json
+instructions_html: static/anchors/cultural-picnic.html

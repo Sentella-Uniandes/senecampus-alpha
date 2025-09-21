@@ -1,0 +1,20 @@
+version: 1
+join_window_min: 15
+notify_template: '{initiator_username} wants ''{anchor_title}'' ({min_size}-{max_size}).
+  Join?'
+reduced_dim: 128
+slug: recycled-origami-workshop
+title: Recycled Origami Workshop
+description: Fold origami using recycled paper; a calm, creative session that’s easy
+  to host and join.
+tags:
+- social
+- casual
+- craft
+- calm
+- campus
+is_ghost: false
+min_size: 2
+max_size: 16
+reduced_vec_file: data/anchors/recycled-origami-workshop.reduced.json
+instructions_html: static/anchors/recycled-origami-workshop.html

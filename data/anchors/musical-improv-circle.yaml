@@ -1,0 +1,20 @@
+version: 1
+join_window_min: 15
+notify_template: '{initiator_username} wants ''{anchor_title}'' ({min_size}-{max_size}).
+  Join?'
+reduced_dim: 128
+slug: musical-improv-circle
+title: Musical Improv Circle
+description: Open jam for voices and instruments; improvise rhythms and simple parts—no
+  experience required.
+tags:
+- social
+- casual
+- music
+- creative
+- campus
+is_ghost: false
+min_size: 3
+max_size: 16
+reduced_vec_file: data/anchors/musical-improv-circle.reduced.json
+instructions_html: static/anchors/musical-improv-circle.html

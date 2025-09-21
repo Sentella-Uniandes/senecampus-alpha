@@ -1,0 +1,17 @@
+version: 1
+slug: study-session
+title: Study Session (ghost)
+description: "One user starts an ad-hoc session; others can join."
+tags: [study, focus]
+is_ghost: true
+
+# min/max optional for ghosts — defaults will be applied (2–4)
+min_size: 2
+max_size: 4
+
+join_window_min: 15
+notify_template: "{initiator_username} wants '{anchor_title}' ({min_size}-{max_size}). Join?"
+
+reduced_dim: 128
+reduced_vec_file: data/anchors/study-session.reduced.json
+instructions_html: static/anchors/study-session.html

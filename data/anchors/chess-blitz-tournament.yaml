@@ -1,0 +1,20 @@
+version: 1
+join_window_min: 15
+notify_template: '{initiator_username} wants ''{anchor_title}'' ({min_size}-{max_size}).
+  Join?'
+reduced_dim: 128
+slug: chess-blitz-tournament
+title: Chess Blitz Tournament
+description: Fast, student-run chess matches with rotating opponents; casual competition
+  and strategy on campus.
+tags:
+- social
+- game
+- competition
+- strategy
+- campus
+is_ghost: false
+min_size: 4
+max_size: 16
+reduced_vec_file: data/anchors/chess-blitz-tournament.reduced.json
+instructions_html: static/anchors/chess-blitz-tournament.html
