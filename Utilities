@@ -1,0 +1,19 @@
+import unicodedata
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+def norm_text(s):
+    s = unicodedata.normalize("NFKC", s).strip()
+    return " ".join(s.split())
+
+def looks_like_keywords(s):
+    # Heurística simple: varias comas o ';' sugieren lista de keywords
+    return s.count(",") >= 2 or ";" in s
+
+
+def dot_product(u: np.ndarray, v: np.ndarray):
+    return float(np.dot(u, v))
+
+def max_cos_similarity(v,cluster):
+    distancias_coseno = cosine_similarity(v, cluster).flatten()
+    max= np.argmax(distancias_coseno)
+    return max
